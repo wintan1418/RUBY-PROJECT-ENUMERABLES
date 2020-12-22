@@ -16,5 +16,13 @@ describe Enumerable do
       end
     end
 
+    describe Enumerable do
+      describe my_select do
+        it 'returns only the selected items in an array'
+        enumerable = Enumerable.new
+        expect(enumerable.my_select).to eql()
+        end
+      end
+
 
 end
