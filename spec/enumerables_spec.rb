@@ -176,4 +176,19 @@ describe Enumerable do
       expect(expectation) .to eql(actual)
     end
   end
+
+  # multiply_els
+  describe 'multiply_els' do
+    it 'returns multiplied elements of an integer array ' do
+      expectation = int_arr.my_inject(1) { |result, element| result * element }
+      actual = int_arr.inject(1) { |result, element| result * element }
+      expect(expectation) .to eql(actual)
+    end
+
+    it 'returns multiplied elements of a range array ' do
+      expectation = range_arr.my_inject(1) { |result, element| result * element }
+      actual = range_arr.inject(1) { |result, element| result * element }
+      expect(expectation) .to eql(actual)
+    end
+  end
 end
