@@ -62,6 +62,21 @@ it 'returns a selected item in an array ' do
   expect(expectation) .to eql(['a string', 'array'])
   
   end 
-  
+  # my_all method test
 
+  it 'returns true if all item in an array meets given conditions ' do
+    expectation = int_arr.my_all? {|x| x >= 1 }
+    expect(expectation) .to eql(true)
+    
+    end 
+    it 'returns true if all item in an array meets given conditions ' do
+      expectation = range_arr.my_all? {|x| x > 1 }
+      expect(expectation) .to eql(false)
+      
+      end 
+      it 'returns true if all item in an array meets given conditions ' do
+        expectation = string_arr.my_all? {|x| x.length >= 1 }
+        expect(expectation) .to eql(true)
+        
+        end 
 end

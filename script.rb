@@ -156,3 +156,10 @@ end
 end
 
 
+# ages = [30,20,59,70]
+# adults = ages.select {|x|  x  > 40}
+# p adults
+
+dollar = [50,100,150,400]
+rich = dollar.all? { |x| x >= 50 }
+p rich
