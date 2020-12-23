@@ -126,4 +126,22 @@ it 'returns number of elements in an array meeting a given condition ' do
     expectation = string_arr.my_count {|x| x.length > 2 }
     expect(expectation) .to eql(3)
   end
+
+  #my_map
+  
+  it 'returns elements in array in a modified form after the condition passed in the block ' do
+    expectation = int_arr.my_map {|x| x ** 2 }
+    expect(expectation) .to eql([1,9,25])
+  end
+
+  it 'returns elements in array in a modified form after the condition passed in the block' do
+    expectation = range_arr.my_map {|x|  x ** 2  }
+    expect(expectation) .to eql([ 1,4,9,16,25,36])
+  end
+
+  it 'returns elements in array in a modified form after the condition passed in the block ' do
+    expectation = string_arr.my_map {|x| x + ' and'}
+    expect(expectation) .to eql(string_arr.map {|x| x + ' and'  } )
+  end
+
 end
