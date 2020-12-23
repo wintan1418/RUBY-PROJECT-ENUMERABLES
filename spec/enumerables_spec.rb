@@ -47,4 +47,15 @@ describe Enumerable do
     end
     expect(expectation).to eql(actual)
   end
+it 'returns a selected item in an array ' do
+  expectation = range_arr.select {|x| x > 2 }
+  expect(expectation) .to eql([3,4,5,6])
+
+end
+it 'returns a selected item in an array ' do
+  expectation = int_arr.select {|x| x > 4 }
+  expect(expectation) .to eql([5])
+
+end
+
 end
