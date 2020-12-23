@@ -17,11 +17,14 @@ describe Enumerable do
     expect(string_arr.my_each {|x| x}).to eql(string_arr.each {|x| x})
   end
 
-  # it 'returns each item with index in a array' do
-    
-  #   actual = int_arr.my_each_with_index do |x|
-
-  #   end
-  #   expect().to eql(int_arr.each {|x|})
-  # end
+  #my_each_with_index
+  it 'returns each item with index in a array' do
+    expectation = int_arr.my_each_with_index { |k, v| v}
+    index = 0
+    actual = int_arr.each do
+      index
+      index += 1
+    end
+    expect(expectation).to eql(actual)
+  end
 end
