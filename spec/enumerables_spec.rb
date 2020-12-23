@@ -94,4 +94,20 @@ describe Enumerable do
     expectation = string_arr.my_any? {|x| x.include?("a string") }
     expect(expectation) .to eql(true)
   end
+
+  # my_none?
+  it 'returns true if none of items in an array meets given conditions ' do
+    expectation = int_arr.my_none? {|x| x > 5 }
+    expect(expectation) .to eql(true)
+  end
+
+  it 'returns true if none of items in an array meets given conditions ' do
+    expectation = range_arr.my_none? {|x| x <= 5 }
+    expect(expectation) .to eql(false)
+  end
+
+  it 'returns true if none of items in an array meets given conditions ' do
+    expectation = string_arr.my_none? {|x| x.length > 50 }
+    expect(expectation) .to eql(true)
+  end
 end
