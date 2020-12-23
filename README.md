@@ -93,11 +93,17 @@ To get a local copy of this repository up and running follow these simple steps:
 - Twitter: [@tabe_arrey](https://twitter.com/tabe_arrey)
 - LinkedIn: [Arrey Affuembey](https://www.linkedin.com/in/arrey-affuembey-80a8b11a8/)
 
-**Oluwadare Juwon**
+👤 **Oluwadare Juwon**
 
 - GitHub: [@wintan1418](https://github.com/wintan1418)
 - Twitter: [@juwonoluwadare](https://twitter.com/oluwadarejuwon)
 - LinkedIn: [Oluwadare Juwon](https://www.linkedin.com/in/oluwadare-juwon-048a391a8/)
+
+👤 **Sarvar Khalimov**
+
+- GitHub: [@githubhandle](https://github.com/SarvarKh)
+- Twitter: [@twitterhandle](https://twitter.com/KhalimovSarvar)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sarvar-khalimov/)
 
 ## Show your support
 
