@@ -110,4 +110,20 @@ describe Enumerable do
     expectation = string_arr.my_none? {|x| x.length > 50 }
     expect(expectation) .to eql(true)
   end
+  #my_count
+
+it 'returns number of elements in an array meeting a given condition ' do
+    expectation = int_arr.my_count {|x| x > 2 }
+    expect(expectation) .to eql(2)
+  end
+
+  it 'returns number of elements in an array meeting a given condition ' do
+    expectation = range_arr.my_count {|x| x > 3 }
+    expect(expectation) .to eql(3)
+  end
+
+  it 'returns number of elements in an array meeting a given condition ' do
+    expectation = string_arr.my_count {|x| x.length > 2 }
+    expect(expectation) .to eql(3)
+  end
 end
