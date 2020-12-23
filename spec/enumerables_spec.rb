@@ -27,4 +27,24 @@ describe Enumerable do
     end
     expect(expectation).to eql(actual)
   end
+
+  it 'returns each item with index in a array' do
+    expectation = range_arr.my_each_with_index { |k, v| v}
+    index = 0
+    actual = range_arr.each do
+      index
+      index += 1
+    end
+    expect(expectation).to eql(actual)
+  end
+
+  it 'returns each item with index in a array' do
+    expectation = string_arr.my_each_with_index { |k, v| v}
+    index = 0
+    actual = string_arr.each do
+      index
+      index += 1
+    end
+    expect(expectation).to eql(actual)
+  end
 end
