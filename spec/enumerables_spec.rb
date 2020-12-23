@@ -128,7 +128,6 @@ it 'returns number of elements in an array meeting a given condition ' do
   end
 
   #my_map
-  
   it 'returns elements in array in a modified form after the condition passed in the block ' do
     expectation = int_arr.my_map {|x| x ** 2 }
     expect(expectation) .to eql([1,9,25])
@@ -144,4 +143,25 @@ it 'returns number of elements in an array meeting a given condition ' do
     expect(expectation) .to eql(string_arr.map {|x| x + ' and'  } )
   end
 
+  # my_inject
+  it 'returns accumulated elements in array ' do
+    accumulator = 0
+    expectation = int_arr.my_inject(0) { |result, element| result + element }
+    actual = int_arr.inject(0) { |result, element| result + element }
+    expect(expectation) .to eql(actual)
+  end
+
+  it 'returns accumulated elements in array ' do
+    accumulator = 0
+    expectation = range_arr.my_inject(1) { |result, element| result * element }
+    actual = range_arr.inject(1) { |result, element| result * element }
+    expect(expectation) .to eql(actual)
+  end
+
+  it 'returns accumulated elements in array ' do
+    accumulator = 0
+    expectation = string_arr.my_inject('') { |result, element| result + element }
+    actual = string_arr.inject('') { |result, element| result + element }
+    expect(expectation) .to eql(actual)
+  end
 end

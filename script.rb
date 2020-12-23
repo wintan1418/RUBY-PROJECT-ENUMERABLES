@@ -119,19 +119,19 @@ end
 # my_map
 
 def my_map(proc = nil)
-return to_enum(:my_map) unless block_given?
+  return to_enum(:my_map) unless block_given?
 
-new_array = []
-arr_ = to_a
+  new_array = []
+  arr_ = to_a
 
-if proc.nil?
+  if proc.nil?
 
-  arr_.my_each { |i| new_array << yield(i) }
-else
-  arr_.my_each { |i| new_array << proc.call(i) }
+    arr_.my_each { |i| new_array << yield(i) }
+  else
+    arr_.my_each { |i| new_array << proc.call(i) }
 
-end
-new_array
+  end
+  new_array
 end
 
 def my_inject(arg = nil, sym = nil)
@@ -156,10 +156,4 @@ end
 end
 
 
-# ages = [30,20,59,70]
-# adults = ages.select {|x|  x  > 40}
-# p adults
-
-# dollar = [50,100,150,400]
-# rich = dollar.all? { |x| x >= 50 }
-# p rich
+puts [1, 3, 5].inject(0) { |result, element| result + element }
